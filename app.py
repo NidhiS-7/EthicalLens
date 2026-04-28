@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 # 1. Setup
 load_dotenv()
 API_KEY = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
+project_id = st.secrets["GCP_PROJECT_ID"]
 
 if not API_KEY:
     st.error("Missing GEMINI_API_KEY in .env")
