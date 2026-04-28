@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 # 1. Setup
 load_dotenv()
-API_KEY = st.secrets.get("API_KEY") or os.getenv("GEMINI_API_KEY")
+API_KEY = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
 
 if not API_KEY:
     st.error("Missing GEMINI_API_KEY in .env")
