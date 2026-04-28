@@ -6,13 +6,14 @@ from dotenv import load_dotenv
 
 # 1. Setup
 load_dotenv()
-API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
 
 if not API_KEY:
     st.error("Missing GEMINI_API_KEY in .env")
     st.stop()
 
 genai.configure(api_key=API_KEY)
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # --- DYNAMIC MODEL SELECTION ---
 @st.cache_resource
