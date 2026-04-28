@@ -80,7 +80,7 @@ c1, c2 = st.columns(2, gap="large")
 
 with c1:
     st.markdown("### 📋 Job Context")
-    job_desc = st.text_area("Hiring Criteria:", height=280, placeholder="Paste requirements here...")
+    job_desc = st.text_area("Hiring Criteria:", height=280, placeholder="Add requirements here...")
 
 with c2:
     st.markdown("### 📄 Candidate File")
@@ -113,4 +113,4 @@ if st.button("🚀 EXECUTE ETHICAL AUDIT"):
     else:
         st.warning("Both Job Description and Resume are required for a valid audit.")
 
-st.markdown("<br><center><p style='color:#484f58; font-size:0.8rem;'>Project for UN SDG 10: Reduced Inequalities</p></center>", unsafe_allow_html=True)
+st.markdown("<br><center><p style='color:#484f58; font-size:0.8rem;'>Project for Solutions Challenge 2026 by Nidhi </p></center>", unsafe_allow_html=True)
